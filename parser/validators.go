@@ -25,9 +25,9 @@ import (
 	"time"
 
 	ing_errors "github.com/rikatz/ingress-nginx-annotations/errors"
+	"github.com/rikatz/ingress-nginx-annotations/net"
 	networking "k8s.io/api/networking/v1"
 	machineryvalidation "k8s.io/apimachinery/pkg/api/validation"
-	"k8s.io/ingress-nginx/internal/net"
 )
 
 type AnnotationValidator func(string) error
@@ -202,7 +202,7 @@ func ValidateServiceName(value string) error {
 // 4 - Does the annotation contain aliases? So we should use if the alias is defined an the annotation not.
 // 4 - Runs the validator on the value
 // It will return the full annotation name if all is fine
-func checkAnnotation(name string, ing *networking.Ingress, fields AnnotationFields) (string, error) {
+func CheckAnnotation(name string, ing *networking.Ingress, fields AnnotationFields) (string, error) {
 	var validateFunc AnnotationValidator
 	if fields != nil {
 		config, ok := fields[name]

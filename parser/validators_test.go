@@ -220,7 +220,7 @@ func Test_checkAnnotation(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := checkAnnotation(tt.args.name, tt.args.ing, tt.args.fields)
+			got, err := CheckAnnotation(tt.args.name, tt.args.ing, tt.args.fields)
 			if (err != nil) != tt.wantErr {
 				t.Errorf("checkAnnotation() error = %v, wantErr %v", err, tt.wantErr)
 				return
