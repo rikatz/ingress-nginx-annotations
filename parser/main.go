@@ -93,9 +93,7 @@ type Annotation struct {
 
 // IngressAnnotation has a method to parse annotations located in Ingress
 type IngressAnnotation interface {
-	Parse(ing *networking.Ingress) (interface{}, error)
 	GetDocumentation() AnnotationFields
-	Validate(anns map[string]string) error
 }
 
 type ingAnnotations map[string]string
