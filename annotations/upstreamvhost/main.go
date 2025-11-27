@@ -24,7 +24,7 @@ const (
 	upstreamVhostAnnotation = "upstream-vhost"
 )
 
-var upstreamVhostAnnotations = parser.Annotation{
+var UpstreamVhostAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		upstreamVhostAnnotation: {

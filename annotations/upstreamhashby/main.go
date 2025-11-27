@@ -33,7 +33,7 @@ var (
 	hashByRegex  = regexp.MustCompilePOSIX(`^[A-Za-z0-9\-` + specialChars + `]*$`)
 )
 
-var upstreamHashByAnnotations = parser.Annotation{
+var UpstreamHashByAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		upstreamHashByAnnotation: {

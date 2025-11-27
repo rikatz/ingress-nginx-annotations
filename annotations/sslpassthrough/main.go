@@ -24,7 +24,7 @@ const (
 	sslPassthroughAnnotation = "ssl-passthrough"
 )
 
-var sslPassthroughAnnotations = parser.Annotation{
+var SSLPassthroughAnnotations = parser.Annotation{
 	Group: "", // TBD
 	Annotations: parser.AnnotationFields{
 		sslPassthroughAnnotation: {

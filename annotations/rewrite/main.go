@@ -29,7 +29,7 @@ const (
 	appRootAnnotation               = "app-root"
 )
 
-var rewriteAnnotations = parser.Annotation{
+var RewriteAnnotations = parser.Annotation{
 	Group: "rewrite",
 	Annotations: parser.AnnotationFields{
 		rewriteTargetAnnotation: {

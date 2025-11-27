@@ -24,7 +24,7 @@ const (
 	streamSnippetAnnotation = "stream-snippet"
 )
 
-var streamSnippetAnnotations = parser.Annotation{
+var StreamSnippetAnnotations = parser.Annotation{
 	Group: "snippets",
 	Annotations: parser.AnnotationFields{
 		streamSnippetAnnotation: {

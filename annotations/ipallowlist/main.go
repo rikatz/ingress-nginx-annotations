@@ -25,7 +25,7 @@ const (
 	ipAllowlistAnnotation = "allowlist-source-range"
 )
 
-var allowlistAnnotations = parser.Annotation{
+var AllowlistAnnotations = parser.Annotation{
 	Group: "acl",
 	Annotations: parser.AnnotationFields{
 		ipAllowlistAnnotation: {

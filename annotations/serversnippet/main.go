@@ -24,7 +24,7 @@ const (
 	serverSnippetAnnotation = "server-snippet"
 )
 
-var serverSnippetAnnotations = parser.Annotation{
+var ServerSnippetAnnotations = parser.Annotation{
 	Group: "snippets",
 	Annotations: parser.AnnotationFields{
 		serverSnippetAnnotation: {

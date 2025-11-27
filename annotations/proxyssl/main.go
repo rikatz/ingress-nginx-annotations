@@ -38,7 +38,7 @@ const (
 	proxySSLServerNameAnnotation  = "proxy-ssl-server-name"
 )
 
-var proxySSLAnnotation = parser.Annotation{
+var ProxySSLAnnotation = parser.Annotation{
 	Group: "proxy",
 	Annotations: parser.AnnotationFields{
 		proxySSLSecretAnnotation: {

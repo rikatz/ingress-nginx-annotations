@@ -24,7 +24,7 @@ const (
 	xForwardedForPrefixAnnotation = "x-forwarded-prefix"
 )
 
-var xForwardedForAnnotations = parser.Annotation{
+var XForwardedForAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		xForwardedForPrefixAnnotation: {

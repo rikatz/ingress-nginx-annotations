@@ -31,7 +31,7 @@ const (
 	limitAllowlistAnnotation           = "limit-allowlist"
 )
 
-var rateLimitAnnotations = parser.Annotation{
+var RateLimitAnnotations = parser.Annotation{
 	Group: "rate-limit",
 	Annotations: parser.AnnotationFields{
 		limitRateAnnotation: {

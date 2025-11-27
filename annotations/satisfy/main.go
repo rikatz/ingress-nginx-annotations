@@ -24,7 +24,7 @@ const (
 	satisfyAnnotation = "satisfy"
 )
 
-var satisfyAnnotations = parser.Annotation{
+var SatisfyAnnotations = parser.Annotation{
 	Group: "authentication",
 	Annotations: parser.AnnotationFields{
 		satisfyAnnotation: {

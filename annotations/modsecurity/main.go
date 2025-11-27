@@ -27,7 +27,7 @@ const (
 	modsecSnippetAnnotation         = "modsecurity-snippet"
 )
 
-var modsecurityAnnotation = parser.Annotation{
+var ModsecurityAnnotation = parser.Annotation{
 	Group: "modsecurity",
 	Annotations: parser.AnnotationFields{
 		modsecEnableAnnotation: {

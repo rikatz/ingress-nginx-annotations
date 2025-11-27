@@ -28,7 +28,7 @@ const (
 
 var loadBalanceAlgorithms = []string{"round_robin", "chash", "chashsubset", "sticky_balanced", "sticky_persistent", "ewma"}
 
-var loadBalanceAnnotations = parser.Annotation{
+var LoadBalanceAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		loadBalanceAlgorithmAnnotation: {

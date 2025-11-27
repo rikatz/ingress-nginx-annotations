@@ -24,7 +24,7 @@ const (
 	disableProxyInterceptErrorsAnnotation = "disable-proxy-intercept-errors"
 )
 
-var disableProxyInterceptErrorsAnnotations = parser.Annotation{
+var DisableProxyInterceptErrorsAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		disableProxyInterceptErrorsAnnotation: {

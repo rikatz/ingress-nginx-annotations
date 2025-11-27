@@ -46,7 +46,7 @@ var AuthSecretConfig = parser.AnnotationConfig{
 	Documentation: `This annotation defines the name of the Secret that contains the usernames and passwords which are granted access to the paths defined in the Ingress rules. `,
 }
 
-var authSecretAnnotations = parser.Annotation{
+var AuthSecretAnnotations = parser.Annotation{
 	Group: "authentication",
 	Annotations: parser.AnnotationFields{
 		AuthSecretAnnotation: AuthSecretConfig,

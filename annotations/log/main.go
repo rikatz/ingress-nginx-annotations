@@ -25,7 +25,7 @@ const (
 	enableRewriteLogAnnotation = "enable-rewrite-log"
 )
 
-var logAnnotations = parser.Annotation{
+var LogAnnotations = parser.Annotation{
 	Group: "log",
 	Annotations: parser.AnnotationFields{
 		enableAccessLogAnnotation: {

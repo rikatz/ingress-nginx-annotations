@@ -47,6 +47,14 @@ var (
 	AnnotationScopeIngress  AnnotationScope = "ingress"
 )
 
+type GatewayAPICompatibility string
+
+var (
+	GatewayAPICompatible   GatewayAPICompatibility = "Compatible"
+	GatewayAPIPartial      GatewayAPICompatibility = "Partial"
+	GatewayAPIIncompatible GatewayAPICompatibility = "Incompatible"
+)
+
 // AnnotationRisk is a subset of risk that an annotation may represent.
 // Based on the Risk, the admin will be able to allow or disallow users to set it
 // on their ingress objects
@@ -82,11 +90,6 @@ type Annotation struct {
 	Annotations AnnotationFields
 	// Group defines which annotation group this feature belongs to
 	Group AnnotationGroup
-}
-
-// IngressAnnotation has a method to parse annotations located in Ingress
-type IngressAnnotation interface {
-	GetDocumentation() AnnotationFields
 }
 
 // GetAnnotationWithPrefix returns the prefix of ingress annotations

@@ -30,7 +30,7 @@ const (
 
 var regexOperationName = regexp.MustCompile(`^[A-Za-z0-9_\-]*$`)
 
-var otelAnnotations = parser.Annotation{
+var OtelAnnotations = parser.Annotation{
 	Group: "opentelemetry",
 	Annotations: parser.AnnotationFields{
 		enableOpenTelemetryAnnotation: {

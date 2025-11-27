@@ -24,7 +24,7 @@ const (
 	serverAliasAnnotation = "server-alias"
 )
 
-var aliasAnnotation = parser.Annotation{
+var AliasAnnotation = parser.Annotation{
 	Group: "alias",
 	Annotations: parser.AnnotationFields{
 		serverAliasAnnotation: {

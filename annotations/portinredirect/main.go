@@ -24,7 +24,7 @@ const (
 	portsInRedirectAnnotation = "use-port-in-redirects"
 )
 
-var portsInRedirectAnnotations = parser.Annotation{
+var PortsInRedirectAnnotations = parser.Annotation{
 	Group: "redirect",
 	Annotations: parser.AnnotationFields{
 		portsInRedirectAnnotation: {

@@ -24,7 +24,7 @@ const (
 	enableGlobalAuthAnnotation = "enable-global-auth"
 )
 
-var globalAuthAnnotations = parser.Annotation{
+var GlobalAuthAnnotations = parser.Annotation{
 	Group: "authentication",
 	Annotations: parser.AnnotationFields{
 		enableGlobalAuthAnnotation: {

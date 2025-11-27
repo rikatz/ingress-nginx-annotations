@@ -44,13 +44,10 @@ const (
 )
 
 var (
-	methodsRegex    = regexp.MustCompile("(GET|HEAD|POST|PUT|PATCH|DELETE|CONNECT|OPTIONS|TRACE)")
-	headerRegexp    = regexp.MustCompile(`^[a-zA-Z\d\-_]+$`)
-	statusCodeRegex = regexp.MustCompile(`^\d{3}$`)
-	durationRegex   = regexp.MustCompile(`^\d+(ms|s|m|h|d|w|M|y)$`) // see https://nginx.org/en/docs/syntax.html
+	methodsRegex = regexp.MustCompile("(GET|HEAD|POST|PUT|PATCH|DELETE|CONNECT|OPTIONS|TRACE)")
 )
 
-var authReqAnnotations = parser.Annotation{
+var AuthReqAnnotations = parser.Annotation{
 	Group: "authentication",
 	Annotations: parser.AnnotationFields{
 		authReqURLAnnotation: {

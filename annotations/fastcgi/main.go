@@ -30,10 +30,9 @@ const (
 // fast-cgi valid parameters is just a single file name (like index.php)
 var (
 	regexValidIndexAnnotationAndKey = regexp.MustCompile(`^[A-Za-z0-9.\-\_]+$`)
-	validFCGIValue                  = regexp.MustCompile(`^[A-Za-z0-9\-\_\$\{\}/.]*$`)
 )
 
-var fastCGIAnnotations = parser.Annotation{
+var FastCGIAnnotations = parser.Annotation{
 	Group: "fastcgi",
 	Annotations: parser.AnnotationFields{
 		fastCGIIndexAnnotation: {

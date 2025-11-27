@@ -29,7 +29,7 @@ const (
 // We accept anything between 400 and 599, on a comma separated.
 var arrayOfHTTPErrors = regexp.MustCompile(`^(?:[4,5]\d{2},?)*$`)
 
-var customHTTPErrorsAnnotations = parser.Annotation{
+var CustomHTTPErrorsAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		customHTTPErrorsAnnotation: {

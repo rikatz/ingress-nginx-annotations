@@ -24,7 +24,7 @@ const (
 	serviceUpstreamAnnotation = "service-upstream"
 )
 
-var serviceUpstreamAnnotations = parser.Annotation{
+var ServiceUpstreamAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		serviceUpstreamAnnotation: {

@@ -24,7 +24,7 @@ const (
 	clientBodyBufferSizeAnnotation = "client-body-buffer-size"
 )
 
-var clientBodyBufferSizeConfig = parser.Annotation{
+var ClientBodyBufferSizeConfig = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		clientBodyBufferSizeAnnotation: {

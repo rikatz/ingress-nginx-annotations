@@ -58,7 +58,7 @@ const (
 	corsMaxAgeAnnotation           = "cors-max-age"
 )
 
-var corsAnnotation = parser.Annotation{
+var CORSAnnotation = parser.Annotation{
 	Group: "cors",
 	Annotations: parser.AnnotationFields{
 		corsEnableAnnotation: {

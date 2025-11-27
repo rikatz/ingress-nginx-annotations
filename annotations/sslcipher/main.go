@@ -31,7 +31,7 @@ const (
 // (?:@STRENGTH) is included twice so it can appear before or after @SECLEVEL=n
 var regexValidSSLCipher = regexp.MustCompile(`^(?:(?:[A-Za-z0-9!:+\-_])*(?:@STRENGTH)*(?:@SECLEVEL=[0-5])*(?:@STRENGTH)*)*$`)
 
-var sslCipherAnnotations = parser.Annotation{
+var SSLCipherAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		sslPreferServerCipherAnnotation: {

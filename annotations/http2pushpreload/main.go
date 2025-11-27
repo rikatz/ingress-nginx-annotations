@@ -24,7 +24,7 @@ const (
 	http2PushPreloadAnnotation = "http2-push-preload"
 )
 
-var http2PushPreloadAnnotations = parser.Annotation{
+var HTTP2PushPreloadAnnotations = parser.Annotation{
 	Group: "http2",
 	Annotations: parser.AnnotationFields{
 		http2PushPreloadAnnotation: {

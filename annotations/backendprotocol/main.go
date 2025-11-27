@@ -27,7 +27,7 @@ const (
 	backendProtocolAnnotation = "backend-protocol"
 )
 
-var backendProtocolConfig = parser.Annotation{
+var BackendProtocolConfig = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		backendProtocolAnnotation: {

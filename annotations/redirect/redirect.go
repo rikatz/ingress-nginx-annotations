@@ -29,7 +29,7 @@ const (
 	relativeRedirectsAnnotation     = "relative-redirects"
 )
 
-var redirectAnnotations = parser.Annotation{
+var RedirectAnnotations = parser.Annotation{
 	Group: "redirect",
 	Annotations: parser.AnnotationFields{
 		fromToWWWRedirAnnotation: {

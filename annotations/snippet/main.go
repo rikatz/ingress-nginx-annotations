@@ -24,7 +24,7 @@ const (
 	configurationSnippetAnnotation = "configuration-snippet"
 )
 
-var configurationSnippetAnnotations = parser.Annotation{
+var ConfigurationSnippetAnnotations = parser.Annotation{
 	Group: "snippets",
 	Annotations: parser.AnnotationFields{
 		configurationSnippetAnnotation: {

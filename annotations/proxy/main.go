@@ -45,7 +45,7 @@ const (
 
 var validUpstreamAnnotation = regexp.MustCompile(`^((error|timeout|invalid_header|http_500|http_502|http_503|http_504|http_403|http_404|http_429|non_idempotent|off)\s?)+$`)
 
-var proxyAnnotations = parser.Annotation{
+var ProxyAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		proxyConnectTimeoutAnnotation: {

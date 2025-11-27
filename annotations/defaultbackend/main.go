@@ -24,7 +24,7 @@ const (
 	defaultBackendAnnotation = "default-backend"
 )
 
-var defaultBackendAnnotations = parser.Annotation{
+var DefaultBackendAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		defaultBackendAnnotation: {

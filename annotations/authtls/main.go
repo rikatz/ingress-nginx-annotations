@@ -23,9 +23,6 @@ import (
 )
 
 const (
-	defaultAuthTLSDepth     = 1
-	defaultAuthVerifyClient = "on"
-
 	annotationAuthTLSSecret             = "auth-tls-secret" //#nosec G101
 	annotationAuthTLSVerifyClient       = "auth-tls-verify-client"
 	annotationAuthTLSVerifyDepth        = "auth-tls-verify-depth"
@@ -39,7 +36,7 @@ var (
 	redirectRegex         = regexp.MustCompile(`^(@[A-Za-z0-9_-]+|((https?://)?[A-Za-z0-9\-.]+(:\d+)?)?(/[A-Za-z0-9\-_.]+)*/?)$`)
 )
 
-var authTLSAnnotations = parser.Annotation{
+var AuthTLSAnnotations = parser.Annotation{
 	Group: "authentication",
 	Annotations: parser.AnnotationFields{
 		annotationAuthTLSSecret: {

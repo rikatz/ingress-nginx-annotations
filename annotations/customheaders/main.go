@@ -24,7 +24,7 @@ const (
 	customHeadersConfigMapAnnotation = "custom-headers"
 )
 
-var customHeadersAnnotation = parser.Annotation{
+var CustomHeadersAnnotation = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		customHeadersConfigMapAnnotation: {

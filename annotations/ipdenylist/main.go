@@ -24,7 +24,7 @@ const (
 	ipDenylistAnnotation = "denylist-source-range"
 )
 
-var denylistAnnotations = parser.Annotation{
+var DenylistAnnotations = parser.Annotation{
 	Group: "acl",
 	Annotations: parser.AnnotationFields{
 		ipDenylistAnnotation: {

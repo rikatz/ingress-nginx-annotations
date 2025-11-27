@@ -31,8 +31,6 @@ const (
 	// its value is used as an index into the list of available backends.
 	annotationAffinityCookieName = "session-cookie-name"
 
-	defaultAffinityCookieName = "INGRESSCOOKIE"
-
 	// This is used to force the Secure flag on the cookie even if the
 	// incoming request is not secured. (https://github.com/kubernetes/ingress-nginx/issues/6812)
 	annotationAffinityCookieSecure = "session-cookie-secure"
@@ -63,7 +61,7 @@ const (
 	cookieAffinity = "cookie"
 )
 
-var sessionAffinityAnnotations = parser.Annotation{
+var SessionAffinityAnnotations = parser.Annotation{
 	Group: "affinity",
 	Annotations: parser.AnnotationFields{
 		annotationAffinityType: {

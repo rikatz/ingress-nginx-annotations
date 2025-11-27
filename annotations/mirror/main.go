@@ -30,7 +30,7 @@ const (
 
 var OnOffRegex = regexp.MustCompile(`^(on|off)$`)
 
-var mirrorAnnotation = parser.Annotation{
+var MirrorAnnotation = parser.Annotation{
 	Group: "mirror",
 	Annotations: parser.AnnotationFields{
 		mirrorRequestBodyAnnotation: {

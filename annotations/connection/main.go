@@ -28,7 +28,7 @@ const (
 
 var validConnectionHeaderValue = regexp.MustCompile(`^(close|keep-alive)$`)
 
-var connectionHeadersAnnotations = parser.Annotation{
+var ConnectionHeadersAnnotations = parser.Annotation{
 	Group: "backend",
 	Annotations: parser.AnnotationFields{
 		connectionProxyHeaderAnnotation: {
