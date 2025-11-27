@@ -17,8 +17,11 @@ limitations under the License.
 package parser
 
 import (
+	"errors"
 	"fmt"
 	"strings"
+
+	networking "k8s.io/api/networking/v1"
 )
 
 // DefaultAnnotationsPrefix defines the common prefix used in the nginx ingress controller
@@ -61,6 +64,24 @@ var (
 type AnnotationRisk int
 
 type AnnotationFields map[string]AnnotationConfig
+
+// Validate will check all of the annotations of an Ingress resource against the fields
+func (a AnnotationFields) Validate(ingress *networking.Ingress) error {
+	if ingress == nil {
+		return fmt.Errorf("ingress cannot be null")
+	}
+	var err error
+	for annotation, value := range ingress.Annotations {
+		annTrim := TrimAnnotationPrefix(annotation)
+		if field, ok := a[annTrim]; ok {
+			if errValidation := field.Validator(value); errValidation != nil {
+				err = errors.Join(err, fmt.Errorf("error validating %s: %w", annotation, errValidation))
+			}
+		}
+	}
+
+	return err
+}
 
 // AnnotationConfig defines the configuration that a single annotation field
 // has, with the Validator and the documentation of this field.
