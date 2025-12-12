@@ -41,7 +41,7 @@ jobs:
         with:
            go-version: 'stable'
       - name: Build
-        run: make build          
+        run: make pages          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
