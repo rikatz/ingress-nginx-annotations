@@ -34,7 +34,6 @@ var AllowlistAnnotations = parser.Annotation{
 			Risk:              parser.AnnotationRiskMedium, // Failure on parsing this may cause undesired access
 			Documentation:     `This annotation allows setting a list of IPs and networks allowed to access this Location`,
 			AnnotationAliases: []string{ipWhitelistAnnotation},
-			GatewayAPI:        "Not supported",
 		},
 	},
 }

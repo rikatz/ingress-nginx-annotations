@@ -79,7 +79,6 @@ var AuthReqAnnotations = parser.Annotation{
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskCritical,
 			Documentation: `This annotation allows to specify a custom snippet to use with external authentication`,
-			GatewayAPI:    "Not supported.",
 		},
 		authReqCacheKeyAnnotation: {
 			Validator:     parser.ValidateRegex(parser.NGINXVariable, true),

@@ -40,17 +40,19 @@ func main() {
 
 		var buf bytes.Buffer
 
-		/*
-					 <div class="w3-panel w3-white w3-card w3-display-container">
-			   <p class="w3-text-blue"><b>email.zip</b></p>
-			   <p>https://www.w3schools.com/lib/email.zip</p>
-			 </div>
-		*/
 		for _, v := range matches {
-			buf.WriteString(`<div class="w3-panel w3-white w3-card w3-display-container">`)
+			buf.WriteString(`<div class="w3-card-4">`)
 			val := data[v.Str]
-			buf.WriteString(fmt.Sprintf("<p class=\"w3-text-blue\">%s</p>", v.Str))
-			buf.WriteString(fmt.Sprintf("<p>%s</p>", val.GatewayAPI))
+			gw := val.GatewayAPI
+			icon := "fa-check-circle"
+			theme := "w3-light-blue"
+			if gw == "" {
+				icon = "fa-exclamation-circle"
+				gw = "Not supported yet."
+				theme = "w3-pale-red"
+			}
+			buf.WriteString(fmt.Sprintf("<header class=\"w3-container %s\"><h1>%s <i class=\"fa %s\"></i></h1></header>", theme, v.Str, icon))
+			buf.WriteString(fmt.Sprintf("<div class=\"w3-container\"><p>%s</p></div>", gw))
 			buf.WriteString(`</div>`)
 
 		}

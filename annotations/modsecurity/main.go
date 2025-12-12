@@ -35,28 +35,24 @@ var ModsecurityAnnotation = parser.Annotation{
 			Scope:         parser.AnnotationScopeIngress,
 			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation enables ModSecurity`,
-			GatewayAPI:    "Not supported",
 		},
 		modsecEnableOwaspCoreAnnotation: {
 			Validator:     parser.ValidateBool,
 			Scope:         parser.AnnotationScopeIngress,
 			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation enables the OWASP Core Rule Set`,
-			GatewayAPI:    "Not supported",
 		},
 		modesecTransactionIDAnnotation: {
 			Validator:     parser.ValidateRegex(parser.NGINXVariable, true),
 			Scope:         parser.AnnotationScopeIngress,
 			Risk:          parser.AnnotationRiskHigh,
 			Documentation: `This annotation enables passing an NGINX variable to ModSecurity.`,
-			GatewayAPI:    "Not supported",
 		},
 		modsecSnippetAnnotation: {
 			Validator:     parser.ValidateNull,
 			Scope:         parser.AnnotationScopeIngress,
 			Risk:          parser.AnnotationRiskCritical,
 			Documentation: `This annotation enables adding a specific snippet configuration for ModSecurity`,
-			GatewayAPI:    "Not supported",
 		},
 	},
 }

@@ -32,7 +32,6 @@ var DenylistAnnotations = parser.Annotation{
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskMedium, // Failure on parsing this may cause undesired access
 			Documentation: `This annotation allows setting a list of IPs and networks that should be blocked to access this Location`,
-			GatewayAPI:    "Not supported",
 		},
 	},
 }
