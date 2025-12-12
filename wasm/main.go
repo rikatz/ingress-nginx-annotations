@@ -57,7 +57,7 @@ func main() {
 				buf.WriteString(fmt.Sprintf("<p><a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Reference</a></p>", val.GatewayAPIRef))
 			}
 
-			buf.WriteString(`</div></div>`)
+			buf.WriteString(`</div></div><br/>`)
 
 		}
 
