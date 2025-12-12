@@ -36,6 +36,8 @@ var BackendProtocolConfig = parser.Annotation{
 			Risk:      parser.AnnotationRiskLow, // Low, as it allows just a set of options
 			Documentation: `this annotation can be used to define which protocol should 
 			be used to communicate with backends`,
+			GatewayAPI:    "Supported by APIs like BackendTLSPolicy and GRPCRoute. FCGI is not supported",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/",
 		},
 	},
 }

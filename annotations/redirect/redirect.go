@@ -37,6 +37,8 @@ var RedirectAnnotations = parser.Annotation{
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskLow, // Low, as it allows just a set of options
 			Documentation: `In some scenarios, it is required to redirect from www.domain.com to domain.com or vice versa, which way the redirect is performed depends on the configured host value in the Ingress object.`,
+			GatewayAPI:    "Supported by HTTPRoute 'spec.rules[].filters[].requestRedirect'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 		temporalRedirectAnnotation: {
 			Validator: parser.ValidateRegex(parser.URLIsValidRegex, false),
@@ -44,12 +46,16 @@ var RedirectAnnotations = parser.Annotation{
 			Risk:      parser.AnnotationRiskMedium, // Medium, as it allows arbitrary URLs that needs to be validated
 			Documentation: `This annotation allows you to return a temporal redirect (Return Code 302) instead of sending data to the upstream. 
 			For example setting this annotation to https://www.google.com would redirect everything to Google with a Return Code of 302 (Moved Temporarily).`,
+			GatewayAPI:    "Supported by HTTPRoute 'spec.rules[].filters[].requestRedirect'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 		temporalRedirectAnnotationCode: {
 			Validator:     parser.ValidateInt,
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskLow, // Low, as it allows just a set of options
 			Documentation: `This annotation allows you to modify the status code used for temporal redirects.`,
+			GatewayAPI:    "Supported by HTTPRoute 'spec.rules[].filters[].requestRedirect'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 		permanentRedirectAnnotation: {
 			Validator: parser.ValidateRegex(parser.URLIsValidRegex, false),
@@ -57,12 +63,16 @@ var RedirectAnnotations = parser.Annotation{
 			Risk:      parser.AnnotationRiskMedium, // Medium, as it allows arbitrary URLs that needs to be validated
 			Documentation: `This annotation allows to return a permanent redirect (Return Code 301) instead of sending data to the upstream. 
 			For example setting this annotation https://www.google.com would redirect everything to Google with a code 301`,
+			GatewayAPI:    "Supported by HTTPRoute 'spec.rules[].filters[].requestRedirect'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 		permanentRedirectAnnotationCode: {
 			Validator:     parser.ValidateInt,
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskLow, // Low, as it allows just a set of options
 			Documentation: `This annotation allows you to modify the status code used for permanent redirects.`,
+			GatewayAPI:    "Supported by HTTPRoute 'spec.rules[].filters[].requestRedirect'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 		relativeRedirectsAnnotation: {
 			Validator:     parser.ValidateBool,

@@ -53,18 +53,24 @@ var ProxyAnnotations = parser.Annotation{
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation allows setting the timeout in seconds of the connect operation to the backend.`,
+			GatewayAPI:    "Supported by 'spec.rules[].timeouts.backendRequest'. There is no distinction between 'connect' and general timeout",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutetimeouts",
 		},
 		proxySendTimeoutAnnotation: {
 			Validator:     parser.ValidateInt,
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation allows setting the timeout in seconds of the send operation to the backend.`,
+			GatewayAPI:    "Supported by 'spec.rules[].timeouts.backendRequest'. There is no distinction between 'send' and general timeout",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutetimeouts",
 		},
 		proxyReadTimeoutAnnotation: {
 			Validator:     parser.ValidateInt,
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation allows setting the timeout in seconds of the read operation to the backend.`,
+			GatewayAPI:    "Supported by 'spec.rules[].timeouts.backendRequest'. There is no distinction between 'read' and general timeout",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutetimeouts",
 		},
 		proxyBuffersNumberAnnotation: {
 			Validator: parser.ValidateInt,
@@ -117,6 +123,8 @@ var ProxyAnnotations = parser.Annotation{
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation limits the time during which a request can be passed to the next server`,
+			GatewayAPI:    "Supported by 'spec.rules[].timeouts.backendRequest'. There is no distinction between 'send' and general timeout",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutetimeouts",
 		},
 		proxyNextUpstreamTriesAnnotation: {
 			Validator:     parser.ValidateInt,

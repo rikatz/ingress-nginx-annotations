@@ -33,6 +33,8 @@ var CustomHeadersAnnotation = parser.Annotation{
 			Risk:      parser.AnnotationRiskMedium,
 			Documentation: `This annotation sets the name of a ConfigMap that specifies headers to pass to the client.
 			Only ConfigMaps on the same namespace are allowed`,
+			GatewayAPI:    "Supported by 'spec.rules[].filters[].responseHeaderModifier",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 	},
 }

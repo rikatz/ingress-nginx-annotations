@@ -105,6 +105,9 @@ type AnnotationConfig struct {
 	// GatewayAPI  represents a Gateway API approach that can represent the right
 	// replacement
 	GatewayAPI string
+
+	// GatewayAPIRef represents a link with the documentation of the field
+	GatewayAPIRef string
 }
 
 // Annotation defines an annotation feature an Ingress may have.

@@ -38,12 +38,16 @@ var RewriteAnnotations = parser.Annotation{
 			Risk:      parser.AnnotationRiskMedium,
 			Documentation: `This annotation allows to specify the target URI where the traffic must be redirected. It can contain regular characters and captured 
 			groups specified as '$1', '$2', etc.`,
+			GatewayAPI:    "Partially supported by HTTPRoute 'spec.rules[].filters[].urlRewrite'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 		sslRedirectAnnotation: {
 			Validator:     parser.ValidateBool,
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation defines if the location section is only accessible via SSL`,
+			GatewayAPI:    "Supported by HTTPRoute 'spec.rules[].filters[].requestRedirect'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 		preserveTrailingSlashAnnotation: {
 			Validator:     parser.ValidateBool,
@@ -56,6 +60,8 @@ var RewriteAnnotations = parser.Annotation{
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskMedium,
 			Documentation: `This annotation forces the redirection to HTTPS even if the Ingress is not TLS Enabled`,
+			GatewayAPI:    "Supported by HTTPRoute 'spec.rules[].filters[].requestRedirect'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 		useRegexAnnotation: {
 			Validator: parser.ValidateBool,
@@ -69,6 +75,8 @@ var RewriteAnnotations = parser.Annotation{
 			Scope:         parser.AnnotationScopeLocation,
 			Risk:          parser.AnnotationRiskMedium,
 			Documentation: `This annotation defines the Application Root that the Controller must redirect if it's in / context`,
+			GatewayAPI:    "Partially supported by HTTPRoute 'spec.rules[].filters[].urlRewrite'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#httproutefilter",
 		},
 	},
 }

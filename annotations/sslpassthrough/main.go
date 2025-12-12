@@ -32,6 +32,8 @@ var SSLPassthroughAnnotations = parser.Annotation{
 			Scope:         parser.AnnotationScopeIngress,
 			Risk:          parser.AnnotationRiskLow, // Low, as it allows regexes but on a very limited set
 			Documentation: `This annotation instructs the controller to send TLS connections directly to the backend instead of letting NGINX decrypt the communication.`,
+			GatewayAPI:    "Supported by the TLSRoute API",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#tlsroute",
 		},
 	},
 }

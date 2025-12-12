@@ -51,9 +51,13 @@ func main() {
 				gw = "Not supported yet."
 				theme = "w3-pale-red"
 			}
-			buf.WriteString(fmt.Sprintf("<header class=\"w3-container %s\"><h1>%s <i class=\"fa %s\"></i></h1></header>", theme, v.Str, icon))
-			buf.WriteString(fmt.Sprintf("<div class=\"w3-container\"><p>%s</p></div>", gw))
-			buf.WriteString(`</div>`)
+			buf.WriteString(fmt.Sprintf("<header class=\"w3-container %s\"><h1>%s <i class=\"fa %s\"></i></h1></header><div class=\"w3-container\">", theme, v.Str, icon))
+			buf.WriteString(fmt.Sprintf("<p>%s</p>", gw))
+			if val.GatewayAPIRef != "" {
+				buf.WriteString(fmt.Sprintf("<p><a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Reference</a></p>", val.GatewayAPIRef))
+			}
+
+			buf.WriteString(`</div></div>`)
 
 		}
 

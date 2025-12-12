@@ -49,6 +49,8 @@ var ProxySSLAnnotation = parser.Annotation{
 			It should also contain trusted CA certificates ca.crt in PEM format used to verify the certificate of the proxied HTTPS server. 
 			This annotation expects the Secret name in the form "namespace/secretName"
 			Just secrets on the same namespace of the ingress can be used.`,
+			GatewayAPI:    "Partially supported by the BackendTLSPolicy '.spec.validations.caCertificateRefs'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#backendtlspolicyvalidation",
 		},
 		proxySSLCiphersAnnotation: {
 			Validator: parser.ValidateRegex(proxySSLCiphersRegex, true),
@@ -69,6 +71,8 @@ var ProxySSLAnnotation = parser.Annotation{
 			Risk:      parser.AnnotationRiskHigh,
 			Documentation: `This annotation allows to set proxy_ssl_name. This allows overriding the server name used to verify the certificate of the proxied HTTPS server. 
 			This value is also passed through SNI when a connection is established to the proxied HTTPS server.`,
+			GatewayAPI:    "Supported by the BackendTLSPolicy '.spec.validations.hostname'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#backendtlspolicyvalidation",
 		},
 		proxySSLVerifyAnnotation: {
 			Validator:     parser.ValidateRegex(proxySSLOnOffRegex, true),
@@ -87,6 +91,8 @@ var ProxySSLAnnotation = parser.Annotation{
 			Scope:         parser.AnnotationScopeIngress,
 			Risk:          parser.AnnotationRiskLow,
 			Documentation: `This annotation enables passing of the server name through TLS Server Name Indication extension (SNI, RFC 6066) when establishing a connection with the proxied HTTPS server.`,
+			GatewayAPI:    "Supported by the BackendTLSPolicy '.spec.validations.hostname'",
+			GatewayAPIRef: "https://gateway-api.sigs.k8s.io/reference/spec/#backendtlspolicyvalidation",
 		},
 	},
 }
