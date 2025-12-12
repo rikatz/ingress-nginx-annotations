@@ -106,11 +106,13 @@ func NewAnnotationFactory() parser.AnnotationFields {
 	maps.Copy(factory, upstreamvhost.UpstreamVhostAnnotations.Annotations)
 	maps.Copy(factory, xforwardedprefix.XForwardedForAnnotations.Annotations)
 
+	for _, val := range factory {
+		for _, alias := range val.AnnotationAliases {
+			factory[alias] = val
+		}
+	}
+
 	slog.Info("loaded annotations", "amount", len(factory))
 
 	return factory
-}
-
-func main() {
-	_ = NewAnnotationFactory()
 }

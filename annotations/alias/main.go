@@ -33,6 +33,8 @@ var AliasAnnotation = parser.Annotation{
 			Risk:      parser.AnnotationRiskHigh, // High as this allows regex chars
 			Documentation: `this annotation can be used to define additional server 
 			aliases for this Ingress`,
+			GatewayAPI: `
+Set additional hostnames on your .spec.hostnames.`,
 		},
 	},
 }

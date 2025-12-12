@@ -101,6 +101,10 @@ type AnnotationConfig struct {
 
 	// AnnotationAliases defines other names this annotation may have.
 	AnnotationAliases []string
+
+	// GatewayAPI  represents a Gateway API approach that can represent the right
+	// replacement
+	GatewayAPI string
 }
 
 // Annotation defines an annotation feature an Ingress may have.
